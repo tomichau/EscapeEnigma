@@ -1,7 +1,7 @@
 import extensions.File;
 import extensions.CSVFile;
 
-class Test extends Program{
+class Jeu extends Program{
     boolean quitter = false;
     String[] sauvegardes = new String[]{"Liste Sauvegardes :"};
     int progression = 0;
