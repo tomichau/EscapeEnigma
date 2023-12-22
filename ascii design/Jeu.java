@@ -15,7 +15,7 @@ class Jeu extends Program{
         startGame();
     }
     
-    void startGame(){ // BOUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+    void startGame(){ 
         while(!quitter){
             menu();
             debut();
@@ -25,6 +25,7 @@ class Jeu extends Program{
             println("Vous entrez dans une sombre pièce, et au bout de quelques secondes, les lumières s'allument et un");
             println("une personne s'y tiens en son centre.");
             salleActuel();
+            theEnd();
         }
         boolean sauvegardePartie = false;
         while(!sauvegardePartie){
@@ -87,12 +88,16 @@ class Jeu extends Program{
             clearScreen();
             println(fantomeAngry);
             println("bouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuh");
-            delay(2000);
-            clearScreen();
-            println(fantomeGentil);
-            println("et non je suis gentil en faite ahahah");
-            delay(2000);
-            clearScreen();
+            println("Suivant");
+            if(!equals(readString(), null)){
+                clearScreen();
+                println(fantomeGentil);
+                println("et non je suis gentil en faite ahahah");
+                println("Suivant");
+                if(!equals(readString(), null)){
+                    clearScreen();
+                }
+            }
         }
     }
 
@@ -116,8 +121,11 @@ class Jeu extends Program{
         println("Vous êtes maintenant enfermé dans ce manoir et votre seul moyen d'en sortir est de réussir toute les épreuves");
         println("qui s'y trouvent, chaque salle sera sur le thème d'une matière scolaire ! Je sens que vous êtes plutôt doué donc vous");
         println("devrier y arriver assez facilement non ?");
-        progression += 1;
-        clearScreen();
+        println("Suivant");
+        if(!equals(readString(), null)){
+            progression += 1;
+            clearScreen();
+        }
     }
 
     void anglais(){
@@ -173,7 +181,7 @@ class Jeu extends Program{
     }
     
     void theEnd(){
-        println("coucou");
+        quitter = true;
     } 
 
 }
