@@ -1,2 +1,2 @@
 #!/bin/sh
-javac -cp lib/program.jar:. Test.java
+javac -cp lib/program.jar:. Jeu.java
