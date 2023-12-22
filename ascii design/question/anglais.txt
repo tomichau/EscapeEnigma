@@ -1,0 +1,20 @@
+Chien | Dog
+Chat | Cat
+Maison | House
+Arbre | Tree
+Soleil | Sun
+Lune | Moon
+Etoile | Star
+Fleur | Flower
+Voiture | Car
+Bonjour | Hello
+Merci | Thank you
+Manger | Eat
+S'il vous plaît | Please
+Dormir | Sleep
+Jouet | Toy
+Amis | Friends
+Livre | Book
+Couleur | Color
+Jour | Day
+Nuit | Night
