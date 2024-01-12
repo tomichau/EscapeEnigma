@@ -173,9 +173,9 @@ class Test extends Program{
     }
 
 
-    String[][] questAleaAnglais(String[][] table){
+    /*String[][] questAleaAnglais(String[][] table){
         
-    }
+    }*/
 
 
     void sciences(){
@@ -257,7 +257,7 @@ class Test extends Program{
             char lettre = charAt(motInitiale, i);
             if(lettre == car){
                 lettreIn = true;
-            }else if(car == 'e' && (lettre == 'é' || lettre == 'è')){
+            }else if(car == 'e' && (lettre == 'e' || lettre == 'e')){
                 lettreIn = true;
             }
         }
@@ -280,7 +280,7 @@ class Test extends Program{
                 if(lettreInitiale == caract){
                 motAvecCaract += caract;
                 }else{
-                    if(caract == 'e' && ( lettreInitiale == 'é' || lettreInitiale == 'è')){
+                    if(caract == 'e' && ( lettreInitiale == 'e' || lettreInitiale == 'e')){
                         motAvecCaract += lettreInitiale;
                     }else{
                         motAvecCaract += lettreEtoile;
@@ -298,7 +298,26 @@ class Test extends Program{
         println("Vous arrivé dans une autre salle de classe :");
         println(profHistoire);
     }
-    
+    String questionHistoire(String cheminFichier){
+        CSVFile table = loadCSV(cheminFichier);
+        int nombreLigne = rowCount(table);
+        int nombreColonne = columnCount(table);
+        int[] IdQuestion = new int[15];
+        for(int i = 0; i < 15; i ++){
+            int chooseIdQuestion = random() * nombreLigne;
+            boolean success = false;
+            while (success == false) {
+                if()
+            }
+        }
+        return contenuTable;
+    }
+    Boolean checkArray(int tab){
+        boolean success = false;
+        for(int i = 0; i < tab.length(); i ++){
+            
+        }
+    }
     void theEnd(){
         println("coucou");
     } 
