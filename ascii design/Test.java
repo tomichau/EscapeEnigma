@@ -9,6 +9,7 @@ class Test extends Program{
     String manoir = fileAsString("./image/manoir.txt");
     String fantomeAngry = fileAsString("./image/fantomeAngry.txt");
     String fantomeGentil = fileAsString("./image/fantomeGentil.txt");
+    String profHistoire = fileAsString("./image/profHistoire.txt");
 
     void algorithm(){ 
         clearScreen();
@@ -106,7 +107,8 @@ class Test extends Program{
         if(progression == 0){
             hall();
         }else if(progression == 1){
-            anglais();
+            //anglais();
+            histoire();
         }else if(progression == 2){
             sciences();
         }else if(progression == 3){
@@ -171,9 +173,9 @@ class Test extends Program{
     }
 
 
-    /*String[][] questAlea(String[][] table){
+    String[][] questAleaAnglais(String[][] table){
         
-    }*/
+    }
 
 
     void sciences(){
@@ -289,21 +291,12 @@ class Test extends Program{
         return motAvecCaract;
     }
 
-    /*void toStringScience(String[] tab){
-        String liste = "";
-        int indice = 0;
-        for(int i = 0; i < 4; i += 1){
-            liste = "";
-            for(int x = 0; x < 5; x += 1){
-                liste += tab[indice];
-                indice += 1;
-            }
-            println(liste);
-        }
-    }*/
+    
 
     void histoire(){
-        println("coucou");
+        clearScreen();
+        println("Vous arrivé dans une autre salle de classe :");
+        println(profHistoire);
     }
     
     void theEnd(){
